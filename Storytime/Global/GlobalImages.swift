@@ -9,4 +9,6 @@
 import Foundation
 import UIKit
 
+// Default images used primarily for testing
 let STAR: UIImage = #imageLiteral(resourceName: "star")
+let CUCKOOS_NEST: UIImage = #imageLiteral(resourceName: "cuckoosNest")

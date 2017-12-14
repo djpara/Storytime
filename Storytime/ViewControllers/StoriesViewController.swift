@@ -26,7 +26,8 @@ class StoriesViewController: BaseViewController {
         
         configureView()
         configureController()
-        loadData()
+//        loadData()
+        loadTest()
         reloadTable()
     }
 
@@ -44,9 +45,13 @@ class StoriesViewController: BaseViewController {
         adapter.dataSource = self
     }
     
-    private func loadData() {
+    private func loadTest() {
         data = createTestStories(count: 10)
         data.append(createCookoosNestTest())
+    }
+    
+    private func loadData() {
+        
     }
     
     private func reloadTable() {
@@ -78,16 +83,16 @@ extension StoriesViewController {
         var description: String = ""
         var category: [StoryCategory] = []
         
-        var testStories: [StoryPreview] = []
+        var storyPreviews: [StoryPreview] = []
         
         for c in 1...count {
             title = "Test Story \(c)"
             description = "This is a description which is compososed of the first 32 characters of the story's summary."
             category = [.Action, .Comedy, .Drama, .Fiction, .Horror, .Mature, .Mystery, .NonFiction]
-            testStories.append(StoryPreview(title: title, description: description, category: category))
+            storyPreviews.append(StoryPreview(title: title, description: description, category: category))
         }
         
-        return testStories
+        return storyPreviews
     }
     
     fileprivate func createCookoosNestTest() -> StoryPreview {
@@ -95,6 +100,9 @@ extension StoriesViewController {
         let description = "One Flew Over the Cuckoo's Nest (1962) is a novel written by Ken Kesey. Set in an Oregon psychiatric hospital, the narrative serves as a study of the institutional processes and the human mind as well as a critique of behaviorism and a celebration of humanistic principles. It was adapted into the Broadway play One Flew Over the Cuckoo's Nest by Dale Wasserman in 1963. Bo Goldman adapted the novel into a 1975 film directed by Miloš Forman, which won five Academy Awards."
         let category: [StoryCategory] = [.Drama, .NonFiction]
         
-        return StoryPreview(title: title, description: description, category: category)
+        let storyPreview = StoryPreview(title: title, description: description, category: category)
+        story.image = CUCKOOS_NEST
+        
+        return storyPreview
     }
 }
