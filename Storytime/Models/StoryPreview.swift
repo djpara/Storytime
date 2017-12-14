@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class StoryPreview {
     
     private var _title: String = ""
     private var _description: String = ""
     private var _category: [StoryCategory] = []
+    private var _image: UIImage = STAR
     
     var title: String {
         get {
@@ -20,7 +22,7 @@ class StoryPreview {
         }
         set {
             if newValue.count > 2 {
-                _title = title
+                _title = newValue
             }
         }
     }
@@ -34,7 +36,7 @@ class StoryPreview {
                 let cutoff = newValue.index(newValue.startIndex, offsetBy: 128)
                 _description = "\(String(newValue[..<cutoff]))..."
             } else {
-                _description = description
+                _description = newValue
             }
         }
     }
@@ -44,7 +46,16 @@ class StoryPreview {
             return _category
         }
         set {
-            _category = category
+            _category = newValue
+        }
+    }
+    
+    var image: UIImage {
+        get {
+            return _image
+        }
+        set {
+            _image = newValue
         }
     }
     

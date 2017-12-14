@@ -14,6 +14,7 @@
 		F52403091FE0EBA400032927 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52403081FE0EBA400032927 /* CustomNavigationBar.swift */; };
 		F524030B1FE0EFBA00032927 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524030A1FE0EFBA00032927 /* GlobalColors.swift */; };
 		F524030D1FE0F1DE00032927 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524030C1FE0F1DE00032927 /* CustomButton.swift */; };
+		F52924D01FE228F800E3A9F5 /* GlobalImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52924CF1FE228F800E3A9F5 /* GlobalImages.swift */; };
 		F56992331FD49DC700D33A99 /* SelectedStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56992321FD49DC700D33A99 /* SelectedStoryViewController.swift */; };
 		F56992351FD49E8900D33A99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56992341FD49E8900D33A99 /* BaseViewController.swift */; };
 		F56992371FD49ED000D33A99 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56992361FD49ED000D33A99 /* LibraryViewController.swift */; };
@@ -58,6 +59,7 @@
 		F52403081FE0EBA400032927 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		F524030A1FE0EFBA00032927 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
 		F524030C1FE0F1DE00032927 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F52924CF1FE228F800E3A9F5 /* GlobalImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImages.swift; sourceTree = "<group>"; };
 		F56992321FD49DC700D33A99 /* SelectedStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedStoryViewController.swift; sourceTree = "<group>"; };
 		F56992341FD49E8900D33A99 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F56992361FD49ED000D33A99 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				F5C572F01FCB223D009084CA /* GlobalCell.swift */,
 				F5C572F11FCB223D009084CA /* GlobalFont.swift */,
 				F524030A1FE0EFBA00032927 /* GlobalColors.swift */,
+				F52924CF1FE228F800E3A9F5 /* GlobalImages.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				F500F6EF1FD79C15000DCF3C /* MainTabBarController.swift in Sources */,
 				F56992391FD49ED900D33A99 /* SearchViewController.swift in Sources */,
 				F5DCFE721FDDC801005C027F /* IStory.swift in Sources */,
+				F52924D01FE228F800E3A9F5 /* GlobalImages.swift in Sources */,
 				F5DCFE701FDDC7F7005C027F /* IStoryPreview.swift in Sources */,
 				F5C572ED1FCB2204009084CA /* CustomCellBackgroundView.swift in Sources */,
 				F56992371FD49ED000D33A99 /* LibraryViewController.swift in Sources */,
