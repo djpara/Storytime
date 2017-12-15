@@ -19,7 +19,7 @@ class SelectedStoryViewController: BaseViewController, UITextFieldDelegate {
         Posts user input to the story board
         WILL EVENTUALLY MODIFY SO THAT IT POSTS TO A VOTING BOARD
     */
-    let punctuationList: [Character] = ["." , "?", "!", ","]
+    private let punctuationList: [Character] = ["." , "?", "!", ","]
     
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
