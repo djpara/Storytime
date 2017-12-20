@@ -82,7 +82,6 @@ class SelectedStoryViewController: BaseViewController, UITextFieldDelegate {
         bottomConstraint.constant = keyboardSize - 0.0
 //        bottomConstraint.constant = keyboardSize - bottomLayoutGuide.length
         
-        
         let duration: TimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         
         UIView.animate(withDuration: duration) { self.view.layoutIfNeeded() }

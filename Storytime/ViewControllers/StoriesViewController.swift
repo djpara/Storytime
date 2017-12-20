@@ -13,9 +13,19 @@ class StoriesViewController: BaseViewController {
     
     fileprivate final let STORIES_LABEL = "Stories"
     
-    fileprivate var data: [Any] = []
+    fileprivate var data: [IStoryPreview] = []
     
-    @IBOutlet weak var storyCollectionView: UICollectionView!
+    @IBOutlet fileprivate var storyCollectionView: UICollectionView!
+//        = {
+//        let layout = UICollectionViewFlowLayout()//ListCollectionViewLayout.self
+//        layout.minimumLineSpacing = 0
+//        layout.minimumInteritemSpacing = 0
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+//        view.backgroundColor = ATHENS_GRAY
+//        view.alwaysBounceVertical = true
+//        return view
+//    }()
     
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
@@ -25,22 +35,33 @@ class StoriesViewController: BaseViewController {
         super.viewDidLoad()
         
         configureView()
-        configureController()
 //        loadData()
         loadTest()
-        reloadTable()
+//        reloadTable()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Set the collection view to match the view bounds
+        storyCollectionView.frame = view.bounds
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureController()
     }
     
     private func configureView() {
-        
+        view.addSubview(storyCollectionView)
     }
     
     private func configureController() {
+        // IGList Adapter
         adapter.collectionView = storyCollectionView
         adapter.dataSource = self
     }
@@ -49,9 +70,9 @@ class StoriesViewController: BaseViewController {
         
     }
     
-    internal func reloadTable() {
-        storyCollectionView.reloadData()
-    }
+//    internal func reloadTable() {
+//        storyCollectionView.reloadData()
+//    }
 }
 
 // MARK: ListAdapterDataSource extentions and functions

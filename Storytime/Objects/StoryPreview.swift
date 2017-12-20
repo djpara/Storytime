@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import IGListKit
 import UIKit
 
-class StoryPreview {
+class StoryPreview: IStoryPreview, ListDiffable {
     
     private var _title: String = ""
     private var _description: String = ""
-    private var _category: [StoryCategory] = []
+    private var _categories: [StoryCategory] = []
     private var _image: UIImage = STAR
     
-    var title: String {
+    var storyTitle: String {
         get {
             return _title
         }
@@ -27,7 +28,7 @@ class StoryPreview {
         }
     }
     
-    var description: String {
+    var storyDescription: String {
         get {
             return _description
         }
@@ -41,16 +42,16 @@ class StoryPreview {
         }
     }
     
-    var category: [StoryCategory] {
+    var storyCategories: [StoryCategory] {
         get {
-            return _category
+            return _categories
         }
         set {
-            _category = newValue
+            _categories = newValue
         }
     }
     
-    var image: UIImage {
+    var storyImage: UIImage {
         get {
             return _image
         }
@@ -60,9 +61,21 @@ class StoryPreview {
     }
     
     init(title: String, description: String, category: [StoryCategory]) {
-        self.title = title
-        self.description = description
-        self.category = category
+        self.storyTitle = title
+        self.storyDescription = description
+        self.storyCategories = category
+    }
+    
+    func diffIdentifier() -> NSObjectProtocol {
+        return _title as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        
+        guard self !== object else { return true }
+        guard let object = object as? IStoryPreview else { return false }
+        
+        return storyTitle == object.storyTitle
     }
     
 }

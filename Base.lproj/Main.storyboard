@@ -24,10 +24,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-4B-6UF">
-                                <rect key="frame" x="16" y="0.0" width="343" height="554"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p38-LX-KFO">
+                                <rect key="frame" x="8" y="1" width="359" height="552"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yCq-Xc-Gmf">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kRe-ZK-hDU">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,16 +38,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="LPq-4B-6UF" secondAttribute="bottom" id="MLP-LH-LN5"/>
-                            <constraint firstItem="LPq-4B-6UF" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="WV7-tu-PUv"/>
-                            <constraint firstItem="LPq-4B-6UF" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="cE0-Kc-ahN"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="LPq-4B-6UF" secondAttribute="trailing" constant="16" id="z8e-Rb-lld"/>
+                            <constraint firstItem="p38-LX-KFO" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="8" id="2jr-lN-rp6"/>
+                            <constraint firstItem="p38-LX-KFO" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="1" id="OW8-sZ-Xaf"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="p38-LX-KFO" secondAttribute="trailing" constant="8" id="RbV-lD-QMu"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="p38-LX-KFO" secondAttribute="bottom" constant="1" id="rcq-QZ-3s9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stories" id="PFq-42-ubJ"/>
                     <connections>
-                        <outlet property="storyCollectionView" destination="LPq-4B-6UF" id="BCk-Nk-bwk"/>
+                        <outlet property="storyCollectionView" destination="p38-LX-KFO" id="7a2-nz-xrP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

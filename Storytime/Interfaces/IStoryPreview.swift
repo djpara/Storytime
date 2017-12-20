@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IStoryPreview {
-    
+    var storyTitle: String { get set }
+    var storyDescription: String { get set }
+    var storyCategories: [StoryCategory] { get set }
+    var storyImage: UIImage { get set }
 }

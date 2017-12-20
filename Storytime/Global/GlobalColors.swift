@@ -12,3 +12,4 @@ import UIKit
 internal let WHITE = UIColor.white
 
 internal let VIVID_VIOLET = UIColor(red:0.57, green:0.17, blue:0.57, alpha:1.00)
+internal let ATHENS_GRAY = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.00)
